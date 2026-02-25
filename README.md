@@ -1,2 +1,7 @@
-# Simplicity & Rating
-This is the Final Project for course DSC 80 at UC San Diego.
+# Finding The Correlation Between Simplicity And Rating Of Recipes
+
+Author: Minh Quang Pham
+
+## Overview
+
+This data science project, conducted at UCSD, aims to discover the relationship between the amount of ingredients in a recipe on food.com and its average rating.
