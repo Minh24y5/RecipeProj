@@ -32,3 +32,9 @@ The second dataset, `interactions`, contains 731927 rows and 5 columns:
 |`'date'` |Date of interaction |
 |`'rating'` |Rating given |
 |`'review'` |Review text |
+
+From these datasets, I will analyze whether people rate recipes with less ingredients higher than other recipes or not. To answer that, the most relevant columns in my research will be `'n_ingredients'`, `'rating'`, which will be the rating an user gave on their review, and `'average_rating'`, which is the average rating a recipe has.
+
+From this research, I aim to inform the readers about a potential trend in people's preference to simple recipes, where they do not have to prepare many ingredients and save time and money. I hope the research can help [food.com](https://www.food.com/) improve their report on recipes and see how people react to different recipes based on their complexity.
+
+# Data Cleaning and Exploratory Data Analysis
