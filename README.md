@@ -8,7 +8,7 @@ This data science project, conducted at UCSD, aims to discover the relationship 
 
 First launched in 1999, [food.com](https://www.food.com/) has become one of the biggest website to share recipes for any kind of dish you would think of, featuring over 500,000 user-generated recipes and millions of review. However, people find it harder than ever to prepare food due to many reasons, such as time, thus possibly making simpler recipes to be more popular. This raises a question: **Does simple recipes receive higher rating on average compared to other recipes?** To find this, I choose to analyze a subset of data in the report, containing recipes and reviews posted since 2008.
 
-The first dataset, `recipe`, contains 83782 rows and 10 columns:
+The first dataset, `recipes`, contains 83782 rows and 10 columns:
 
 | Column | Description|
 |---|---|
@@ -22,3 +22,13 @@ The first dataset, `recipe`, contains 83782 rows and 10 columns:
 | `'n_steps'` | Number of steps in recipe |
 | `'steps'` | Text for recipe steps, in order |
 | `'description'` | User-provided description |
+
+The second dataset, `interactions`, contains 731927 rows and 5 columns:
+
+|Column |Description |
+|---|---|
+|`'user_id'` |User ID |
+|`'recipe_id'` |Recipe ID |
+|`'date'` |Date of interaction |
+|`'rating'` |Rating given |
+|`'review'` |Review text |
