@@ -143,3 +143,7 @@ I am going to examine whether simple recipes have higher average rating than oth
 
 **Significance Level**: 0.05
 
+Below is the empirical distribution of difference of means between simple recipes and complex recipes, with the observed difference being indicated by a red line.
+
+<iframe src="assets/part4_dist.html" width="800" height="600" frameborder="0"></iframe>
+
