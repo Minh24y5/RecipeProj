@@ -68,4 +68,4 @@ I analyzed the n_ingredients column to see the distribution of the amount of ing
 
 <iframe src="assets/ing_dist.html" width="800" height="600" frameborder="0"></iframe>
 
-From this histogram, we can observe that the distribution is right-skewed, showing that recipes on food.com tend to have less ingredients with 8 being the most common number of ingredients. There are also a decreasing trend that less recipes have many ingredients.
+From this histogram, we can observe that the distribution is right-skewed, showing that recipes on food.com tend to have less ingredients with 8 being the most common number of ingredients. There is also a decreasing trend that less recipes have many ingredients.
