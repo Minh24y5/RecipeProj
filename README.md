@@ -55,13 +55,13 @@ In order to have the most effective analysis on this topic, I will clean the dat
 
 The resulting dataframe has 234429 rows and 20 columns. Because of the large number of columns, I decided to only show the most relevant columns to my research. Below is the first 5 unique recipes of the cleaned dataframe:
 
-|name|id|minutes|n_steps|n_ingredients|rating|average_rating|simple|Year|
-|---|---|---|---|---|---|---|---|---|
-|1 brownies in the world best ever|333281|40|10|9|4|4|False|2008|
-|1 in canada chocolate chip cookies|453467|45|12|11|5|5|False|2011|
-|412 broccoli casserole|306168|40|6|9|5|5|False|2008|
-|millionaire pound cake|286009|120|7|7|5|5|True|2008|
-|2000 meatloaf|475785|90|17|13|4|4|False|2012|
+| name                                 |     id |   minutes |   n_steps |   n_ingredients |   rating |   average_rating | simple   |   Year |
+|:-------------------------------------|-------:|----------:|----------:|----------------:|---------:|-----------------:|:---------|-------:|
+| 1 brownies in the world    best ever | 333281 |        40 |        10 |               9 |        4 |                4 | False    |   2008 |
+| 1 in canada chocolate chip cookies   | 453467 |        45 |        12 |              11 |        5 |                5 | False    |   2011 |
+| 412 broccoli casserole               | 306168 |        40 |         6 |               9 |        5 |                5 | False    |   2008 |
+| millionaire pound cake               | 286009 |       120 |         7 |               7 |        5 |                5 | True     |   2008 |
+| 2000 meatloaf                        | 475785 |        90 |        17 |              13 |        5 |                5 | False    |   2012 |
 
 ## Univarate Analysis
 I analyzed the n_ingredients column to see the distribution of the amount of ingredients for each recipe.
@@ -95,3 +95,14 @@ I aggregate the average rating of each type of recipe in each year from 2008 to 
 |   2018 | 4.55422 | 4.3     |
 
 # Assessment of Missingness
+
+## MNAR Analysis
+
+From my research, I found several columns in the dataset with missing values, but the column that is likely MNAR is `'review'`. The missing can come from the fact that many people often just do not have anything to say about the recipe, and they would just submit the rating or not interact with the recipe at all. Text review is usually optional, so users can leave it out when making a rating.
+
+## Missingness Dependency
+
+For this section, I am going to test the dependency of the missingness at column `'description'`. The other two columns to be tested are `'minutes'` and `'n_ingredients'`. My test statistic will be the absolute difference of means between distribution of each column when description is missing and not missing. The significance level for both tests will be 0.05.
+
+### Minutes and Description
+
