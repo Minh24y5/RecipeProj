@@ -150,3 +150,10 @@ Below is the empirical distribution of difference of means between simple recipe
 I performed a permutation test by shuffling the `'simple'` column with 1000 simulations and the resulting p-value was **0.00**. Because my p-value is smaller than 0.05, the result can be considered statistically significant and we **reject** the null hypothesis. Therefore, recipes with less ingredients required usually receive higher ratings than other recipes on average.
 
 # Framing a Prediction Problem
+
+From the hypothesis testing section, I decided to frame a prediction model for average rating. This will be a **regression** problem since average ratings can be decimals (continuous quantitative type) and have values from 1 to 5. 
+
+The metric to be used for evaluation will be **RMSE**. I chose this because it can be more sensitive to outliers, such as the 1-or-2-star reviews for a recipe with 4.5 average rating. RMSE can also penalize large mistakes more than other metrics. For instance, if my model predicts a 4 while the real rating for the recipe is 5, that would be a big failure.
+
+# Baseline Model
+
