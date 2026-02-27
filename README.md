@@ -107,6 +107,7 @@ For this section, I am going to test the dependency of the missingness at column
 ### Minutes and Description
 
 **Null Hypothesis**: Distribution of `'minutes'` when `'description'` is missing is similar to distribution of `'minutes'` when `'description'` is not missing.
+
 **Alternative Hypothesis**: Distribution of `'minutes'` when `'description'` is missing is not similar to distribution of `'minutes'` when `'description'` is not missing.
 
 <iframe src="assets/min_dess_miss.html" width="800" height="600" frameborder="0"></iframe>
@@ -114,3 +115,18 @@ For this section, I am going to test the dependency of the missingness at column
 <iframe src="assets/minutes_description.html" width="800" height="600" frameborder="0"></iframe>
 
 After performing permutation test for 1000 times to collect 1000 samples, my p-value **(0.23)** > 0.05. We fail to reject the null hypothesis, so the missingness of `'description'` does not depend on `'minutes'`.
+
+### Ingredients and Description
+The other column to be tested is `'n_ingredients'`.
+
+**Null Hypothesis**: Distribution of `'n_ingredients'` when `'description'` is missing is similar to distribution of `'minutes'` when `'description'` is not missing.
+
+**Alternative Hypothesis**: Distribution of `'n_ingredients'` when `'description'` is missing is not similar to distribution of `'minutes'` when `'description'` is not missing.
+
+<iframe src="assets/ing_des_miss.html" width="800" height="600" frameborder="0"></iframe>
+
+I performed a permutation test for 100 times to collect 1000 samples.
+
+<iframe src="assets/n_ingredients_description.html" width="800" height="600" frameborder="0"></iframe>
+
+The p-value I found is **0.02**. Since my p-value is smaller than 0.05, we reject the null hypothesis, therefore the missingness of `'description'` does depend on `'n_ingredients'`.
