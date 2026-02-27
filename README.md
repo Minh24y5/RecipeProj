@@ -72,7 +72,7 @@ From this histogram, we can observe that the distribution is right-skewed, showi
 
 ## Bivariate Analysis
 
-<iframe src="assets/ing_dist.html" width="800" height="600" frameborder="0"></iframe>
+<iframe src="assets/simple_trend.html" width="800" height="600" frameborder="0"></iframe>
 
 I used the `'Year'` column in the dataset and the number of entries for simple and not simple recipes to create a bivariate analysis. In the graph above, there is a gradual decrease in both simple recipes and 'complex' recipes over the years. We can also see that as time goes on, the number of simple and complex recipes submitted each year became increasingly similar.
 
