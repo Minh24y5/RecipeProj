@@ -38,3 +38,26 @@ From these datasets, I will analyze whether people rate recipes with less ingred
 From this research, I aim to inform the readers about a potential trend in people's preference to simple recipes, where they do not have to prepare many ingredients and save time and money. I hope the research can help [food.com](https://www.food.com/) improve their report on recipes and see how people react to different recipes based on their complexity.
 
 # Data Cleaning and Exploratory Data Analysis
+
+## Data Cleaning
+In order to have the most effective analysis on this topic, I will clean the data in the following steps:
+1. Left merge the recipes dataset with the ratings dataset on `'id'` and `'recipe_id'`, respectively.
+
+2. In the merged dataframe, fill all ratings of 0 with `np.nan`. Because rating is on a scale of 1 to 5, which mean that 1 will be the lowest rating while 5 means the highest rating, I think that 0 indicates that the review did not include a rating or the rating was missing. Therefore, replacing 0 with np.nan can help avoid bias.
+
+3. Use groupby method to find the average rating of each recipe as a Series.
+
+4. Assign a new column `'average_rating'` to the dataframe.
+
+5. Add column `'simple'` to the dataframe. From my data cleaning process, I discover that the average ingredients per recipe of the recipes dataset is 9. As a result, I assume that a simple ingredients would have less ingredients than this amount. `'simple'` is a boolean column that has True values for recipes with strictly less than 9 ingredients, and False values for other recipes.
+
+The resulting dataframe has 234429 rows and 19 columns. Because of the large number of columns, I decided to only show the most relevant columns to my research. Below is the first 5 unique recipes of the cleaned dataframe:
+
+|name|id|minutes|n_steps|n_ingredients|rating|average_rating|simple|
+|---|---|---|---|---|---|---|---|
+|1 brownies in the world best ever|333281|40|10|9|4|4|False|
+|1 in canada chocolate chip cookies|453467|45|12|11|5|5|False|
+|412 broccoli casserole|306168|40|6|9|5|5|False|
+|millionaire pound cake|286009|120|7|7|5|5|True|
+|2000 meatloaf|475785|90|17|13|4|4|False|
+
