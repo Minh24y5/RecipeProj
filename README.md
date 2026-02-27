@@ -64,6 +64,8 @@ The resulting dataframe has 234429 rows and 20 columns. Because of the large num
 |2000 meatloaf|475785|90|17|13|4|4|False|2012|
 
 ## Univarate Analysis
-I analyzed the n_ingredients column, to see the distribution of the amount of ingredients for each recipe.
+I analyzed the n_ingredients column to see the distribution of the amount of ingredients for each recipe.
 
+<iframe src="assets/ing_dist.html" width="800" height="600" frameborder="0"></iframe>
 
+From this histogram, we can observe that the distribution is right-skewed, showing that recipes on food.com tends to have less ingredients and there are less recipes with many ingredients.
