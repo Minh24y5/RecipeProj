@@ -136,3 +136,10 @@ The p-value I found is **0.02**. Since my p-value is smaller than 0.05, we rejec
 I am going to examine whether simple recipes have higher average rating than other recipes or not by permutation test. The relevant columns for this test are `'simple'` and `'average_rating'`.
 
 **Null Hypothesis**: Simple recipes have the same average ratings as more complex recipes.
+
+**Alternative Hypothesis**: Simple recipes have higher average ratings than more complex recipes.
+
+**Test Statistic**: Difference in means between average rating of simple recipes and complex recipes.
+
+**Significance Level**: 0.05
+
