@@ -51,13 +51,19 @@ In order to have the most effective analysis on this topic, I will clean the dat
 
 5. Add column `'simple'` to the dataframe. From my data cleaning process, I discover that the average ingredients per recipe of the recipes dataset is 9. As a result, I assume that a simple ingredients would have less ingredients than this amount. `'simple'` is a boolean column that has True values for recipes with strictly less than 9 ingredients, and False values for other recipes.
 
-The resulting dataframe has 234429 rows and 19 columns. Because of the large number of columns, I decided to only show the most relevant columns to my research. Below is the first 5 unique recipes of the cleaned dataframe:
+6. Add column `'Year'` to the dataframe. I do this by convert the `'submitted'` column, which is in string, to pd.datetime, and then extract the year from that column.
 
-|name|id|minutes|n_steps|n_ingredients|rating|average_rating|simple|
-|---|---|---|---|---|---|---|---|
-|1 brownies in the world best ever|333281|40|10|9|4|4|False|
-|1 in canada chocolate chip cookies|453467|45|12|11|5|5|False|
-|412 broccoli casserole|306168|40|6|9|5|5|False|
-|millionaire pound cake|286009|120|7|7|5|5|True|
-|2000 meatloaf|475785|90|17|13|4|4|False|
+The resulting dataframe has 234429 rows and 20 columns. Because of the large number of columns, I decided to only show the most relevant columns to my research. Below is the first 5 unique recipes of the cleaned dataframe:
+
+|name|id|minutes|n_steps|n_ingredients|rating|average_rating|simple|Year|
+|---|---|---|---|---|---|---|---|---|
+|1 brownies in the world best ever|333281|40|10|9|4|4|False|2008|
+|1 in canada chocolate chip cookies|453467|45|12|11|5|5|False|2011|
+|412 broccoli casserole|306168|40|6|9|5|5|False|2008|
+|millionaire pound cake|286009|120|7|7|5|5|True|2008|
+|2000 meatloaf|475785|90|17|13|4|4|False|2012|
+
+## Univarate Analysis
+I analyzed the n_ingredients column, to see the distribution of the amount of ingredients for each recipe.
+
 
