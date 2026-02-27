@@ -106,3 +106,11 @@ For this section, I am going to test the dependency of the missingness at column
 
 ### Minutes and Description
 
+**Null Hypothesis**: Distribution of `'minutes'` when `'description'` is missing is similar to distribution of `'minutes'` when `'description'` is not missing.
+**Alternative Hypothesis**: Distribution of `'minutes'` when `'description'` is missing is not similar to distribution of `'minutes'` when `'description'` is not missing.
+
+<iframe src="assets/min_dess_miss.html" width="800" height="600" frameborder="0"></iframe>
+
+<iframe src="assets/minutes_description.html" width="800" height="600" frameborder="0"></iframe>
+
+After performing permutation test for 1000 times to collect 1000 samples, my p-value **(0.23)** > 0.05. We fail to reject the null hypothesis, so the missingness of `'description'` does not depend on `'minutes'`.
