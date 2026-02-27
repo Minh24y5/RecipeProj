@@ -69,3 +69,29 @@ I analyzed the n_ingredients column to see the distribution of the amount of ing
 <iframe src="assets/ing_dist.html" width="800" height="600" frameborder="0"></iframe>
 
 From this histogram, we can observe that the distribution is right-skewed, showing that recipes on food.com tend to have less ingredients with 8 being the most common number of ingredients. There is also a decreasing trend that less recipes have many ingredients.
+
+## Bivariate Analysis
+
+<iframe src="assets/ing_dist.html" width="800" height="600" frameborder="0"></iframe>
+
+I used the `'Year'` column in the dataset and the number of entries for simple and not simple recipes to create a bivariate analysis. In the graph above, there is a gradual decrease in both simple recipes and 'complex' recipes over the years. We can also see that as time goes on, the number of simple and complex recipes submitted each year became increasingly similar.
+
+## Interesting Aggregate
+
+I aggregate the average rating of each type of recipe in each year from 2008 to 2018. The pivot table showcases an unexpected result, as the average ratings of both recipe types seem to be not so different and fairly high over the years.
+
+|   Year |   False |    True |
+|-------:|--------:|--------:|
+|   2008 | 4.6524  | 4.67036 |
+|   2009 | 4.67023 | 4.69261 |
+|   2010 | 4.69371 | 4.70456 |
+|   2011 | 4.68996 | 4.72652 |
+|   2012 | 4.74331 | 4.69166 |
+|   2013 | 4.73265 | 4.67093 |
+|   2014 | 4.71671 | 4.71799 |
+|   2015 | 4.80851 | 4.41176 |
+|   2016 | 4.57778 | 4.43307 |
+|   2017 | 4.44889 | 4.49153 |
+|   2018 | 4.55422 | 4.3     |
+
+# Assessment of Missingness
