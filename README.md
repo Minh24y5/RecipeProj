@@ -130,3 +130,9 @@ I performed a permutation test for 100 times to collect 1000 samples.
 <iframe src="assets/n_ingredients_description.html" width="800" height="600" frameborder="0"></iframe>
 
 The p-value I found is **0.02**. Since my p-value is smaller than 0.05, we reject the null hypothesis, therefore the missingness of `'description'` does depend on `'n_ingredients'`.
+
+# Hypothesis Testing
+
+I am going to examine whether simple recipes have higher average rating than other recipes or not by permutation test. The relevant columns for this test are `'simple'` and `'average_rating'`.
+
+**Null Hypothesis**: Simple recipes have the same average ratings as more complex recipes.
