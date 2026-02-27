@@ -147,3 +147,6 @@ Below is the empirical distribution of difference of means between simple recipe
 
 <iframe src="assets/part4_dist.html" width="800" height="600" frameborder="0"></iframe>
 
+I performed a permutation test by shuffling the `'simple'` column with 1000 simulations and the resulting p-value was **0.00**. Because my p-value is smaller than 0.05, the result can be considered statistically significant and we **reject** the null hypothesis. Therefore, recipes with less ingredients required usually receive higher ratings than other recipes on average.
+
+# Framing a Prediction Problem
