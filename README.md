@@ -159,11 +159,15 @@ The metric to be used for evaluation will be **RMSE**. I chose this because it c
 
 My baseline model used a Linear Regressor with two features: `'n_steps'` and `'n_ingredients'`. As both of these features are quantitative, I standardized them with StandardScaler to avoid dealing with large numbers of steps or ingredients, which can be considered outliers to my data. This model is expected to help users balance out their recipes so that the average rating for their recipes would be as good as possible.
 
-After testing out the model, my resulting RMSE of this baseline model is **0.4899**. It means the difference our predicted average rating and the actual average rating of a recipe is typically 0.4899. It seems that our model can be fairly accurate, but this can also face problem of overfitting, and 0.4899 can be considered a quite large distance. Therefore, I believe that there is room for improvement, with more data points and features.
+After testing out the model, my resulting RMSE of this baseline model is **0.4899**. It means the difference my predicted average rating and the actual average rating of a recipe is typically 0.4899. It seems that my model can be fairly accurate, but this can also face problem of overfitting, and 0.4899 can be considered a quite large distance. Therefore, I believe that there is room for improvement, with more data points and features.
 
-## Final Model
+# Final Model
 
-For my final model, I decided to add two more features: `'steps_per_ingredient'` and `'mins_per_step'` using FunctionTransformer, as well as changing my modelling algorithm to RandomForestRegressor. 
+For my final model, I decided to add two more features: `'steps_per_ingredient'` and `'time_per_step'` using FunctionTransformer. `'steps_per_ingredient'` can be calculated by dividing `'steps'` by `'n_ingredients'`. I chose this feature as it helps capture the complexity of the process related to a recipe, therefore reflecting general trends of the recipes better. For instance, a recipe with 20 steps for 2 ingredients can be considered as more complex than a recipe with 20 steps for 20 ingredients. We can get `'time_per_step'` by dividing `'minutes'` by `'steps'` to get an approximation of average minutes spent on a step. Short time may suggest a quick and simple process, while longer time could indicate a more intensive prep. 
+
+I also changed my modelling algorithm to `RandomForestRegressor`, because I find it better at capturing non-linear relationship between my features, and it is less likely to be affected by outliers in the dataset. The hyperparameters that performed that best were `max_depth` and `n_estimators`. The best resulting combination of the two hyperparameters are `None` for `max_depth` and **100** for `n_estimators`.
+
+My metric RMSE is now **0.465**, which is a 0.0249 decrease in my metric. I can say that the model was improved based on the decrease of RMSE in the performance of the final model.
 
 
 
