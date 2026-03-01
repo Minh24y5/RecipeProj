@@ -157,13 +157,15 @@ The metric to be used for evaluation will be **RMSE**. I chose this because it c
 
 # Baseline Model
 
-My baseline model used a Linear Regressor with two features: `'n_steps'` and `'n_ingredients'`. As both of these features are quantitative, I standardized them with StandardScaler to avoid dealing with large numbers of steps or ingredients, which can be considered outliers to my data.
+My baseline model used a Linear Regressor with two features: `'n_steps'` and `'n_ingredients'`. As both of these features are quantitative, I standardized them with StandardScaler to avoid dealing with large numbers of steps or ingredients, which can be considered outliers to my data. This model is expected to help users balance out their recipes so that the average rating for their recipes would be as good as possible.
 
-After testing out the model, my resulting RMSE of this baseline model is **0.4899**. It means the difference our predicted average rating and the actual average rating of a recipe is typically 0.4899. It seems that our model can be fairly accurate, but this can also face problem of overfitting, and 0.4899 can be considered a quite large distance.
+After testing out the model, my resulting RMSE of this baseline model is **0.4899**. It means the difference our predicted average rating and the actual average rating of a recipe is typically 0.4899. It seems that our model can be fairly accurate, but this can also face problem of overfitting, and 0.4899 can be considered a quite large distance. Therefore, I believe that there is room for improvement, with more data points and features.
 
 ## Final Model
 
-For my final model, I decided to add two more features: `'steps_per_ingredient'` and `'mins_per_step'` using FunctionTransformer, as well as changing my modelling algorithm to RandomForestRegressor.
+For my final model, I decided to add two more features: `'steps_per_ingredient'` and `'mins_per_step'` using FunctionTransformer, as well as changing my modelling algorithm to RandomForestRegressor. 
+
+
 
 
 
