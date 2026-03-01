@@ -169,7 +169,22 @@ I also changed my modelling algorithm to `RandomForestRegressor`, because I find
 
 My metric RMSE is now **0.465**, which is a 0.0249 decrease in my metric. I can say that the model was improved based on the decrease of RMSE in the performance of the final model.
 
+# Fairness Analysis
 
+I decided to used simple and complex recipes, with the same condition as mentioned in data cleaning section, for my fairness analysis. I will perform a permutation test by shuffling the `simple` labels for 1000 times to collect 1000 samples.
 
+**Null Hypothesis**: The model is fair. Its RMSE for simple recipes and complex recipes is roughly the same.
+
+**Alternative Hypothesis**: The model is unfair. Its RMSE for complex recipes is higher than its RMSE for simple recipes.
+
+**Test Statistic**: Difference in RMSE between simple recipes and complex recipes.
+
+**Significance Level**: 0.05
+
+Below is the empirical distribution after performing the permutation test:
+
+<iframe src="assets/fair_emp_dist.html" width="800" height="600" frameborder="0"></iframe>
+
+After performing the permutation test, the p-value I received was **0.02**. Since it was smaller than 0.05, we reject the null hypothesis, meaning that our model was not fair enough, and RMSE for complex recipes tends to be higher than RMSE for simple recipes.
 
 
